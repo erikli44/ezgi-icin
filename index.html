@@ -116,6 +116,35 @@ footer{text-align:center;padding:20px 0 48px;color:#baa9c6}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 </style>
+
+<style>
+  body{background:
+    radial-gradient(circle at 15% 10%,rgba(255,143,189,.22),transparent 28%),
+    radial-gradient(circle at 85% 20%,rgba(188,165,255,.18),transparent 30%),
+    linear-gradient(155deg,#110a18,#281432)!important}
+  .cinematic-line{
+    width:min(760px,88%);height:1px;margin:20px auto 0;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent)
+  }
+  .story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .story-step{position:relative;padding-top:22px}
+  .story-step:before{
+    content:"";position:absolute;top:0;left:0;width:54px;height:3px;border-radius:3px;
+    background:linear-gradient(90deg,#ff8fbd,#bca5ff)
+  }
+  .story-step small{color:#ffd8e8;font-weight:800}
+  .promise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .promise{min-height:180px;display:flex;flex-direction:column;justify-content:center}
+  .glow-word{
+    background:linear-gradient(90deg,#fff,#ffd8e8,#c8b5ff);
+    -webkit-background-clip:text;background-clip:text;color:transparent
+  }
+  .final-note{font-size:clamp(20px,3vw,31px);line-height:1.6;color:#ffe0ee}
+  @media(max-width:850px){
+    .story-grid,.promise-grid{grid-template-columns:1fr}
+  }
+</style>
+
 </head>
 <body>
 
@@ -150,7 +179,7 @@ footer{text-align:center;padding:20px 0 48px;color:#baa9c6}
       <span class="badge">Ezgi için hazırlandı</span>
       <h1><span class="grad">Yalnız değilsin.</span><br>Ben buradayım.</h1>
       <p>Bazen her şey üst üste gelebilir. Ama ne olursa olsun, yanında seni düşünen, seni önemseyen ve yüzünü yeniden güldürmek isteyen biri var.</p>
-      <div class="actions">
+      <div class="cinematic-line"></div><div class="actions">
         <a class="btn primary" href="#surpriz">İlk sürprizi aç</a>
         <a class="btn secondary" href="#mektup">Mesajımı oku</a>
       </div>
@@ -191,6 +220,22 @@ footer{text-align:center;padding:20px 0 48px;color:#baa9c6}
 </div>
 </section>
 
+
+<section class="section">
+  <div class="wrap">
+    <div class="title">
+      <h2>Bizim hikâyemiz küçük anlardan oluşuyor</h2>
+      <p>Bazen en güzel şeyler büyük cümlelerde değil, hatırladığımız küçük detaylarda saklıdır.</p>
+    </div>
+    <div class="story-grid">
+      <div class="card story-step tilt"><small>01</small><h3>Bir gülüş</h3><p>Günün nasıl geçtiğini unutturacak kadar güzel.</p></div>
+      <div class="card story-step tilt"><small>02</small><h3>Bir bakış</h3><p>Bazen uzun bir cümleden daha çok şey anlatıyor.</p></div>
+      <div class="card story-step tilt"><small>03</small><h3>Birlikte geçen zaman</h3><p>Sıradan bir günü bile özel bir anıya dönüştürüyor.</p></div>
+      <div class="card story-step tilt"><small>04</small><h3>Devamı</h3><p>Daha çok gülmek ve daha çok “iyi ki” biriktirmek istiyorum.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="mektup">
 <div class="wrap">
   <div class="title"><h2>Ezgi’ye</h2></div>
@@ -217,17 +262,33 @@ footer{text-align:center;padding:20px 0 48px;color:#baa9c6}
 </div>
 </section>
 
+
+<section class="section">
+  <div class="wrap">
+    <div class="title">
+      <h2>Sana söz veremeyeceğim şeyler de var</h2>
+      <p>Her şeyin kusursuz olacağını söyleyemem. Ama şunları söyleyebilirim.</p>
+    </div>
+    <div class="promise-grid">
+      <div class="card promise tilt"><h3>Dinlemeye çalışacağım</h3><p>Çözüm vermem gerekmediğinde sadece yanında kalmayı öğreneceğim.</p></div>
+      <div class="card promise tilt"><h3>Gülüşünü korumaya çalışacağım</h3><p>Bazen iyi bir cümleyle, bazen kötü bir şakayla.</p></div>
+      <div class="card promise tilt"><h3>Zor günlerde kaçmayacağım</h3><p>Her şeyi düzeltemesem bile yalnız bırakmamaya çalışacağım.</p></div>
+      <div class="card promise tilt"><h3>Gerçek olacağım</h3><p>Kusursuz görünmeye değil, sana karşı samimi olmaya çalışacağım.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
 <div class="wrap">
   <div class="final tilt">
-    <h2>Ben seninle birlikte mutlu olmak istiyorum.</h2>
+    <h2><span class="glow-word">Ben seninle birlikte mutlu olmak istiyorum.</span></h2>
     <p>Her gün kusursuz olsun diye değil; güzel günleri büyütmek, zor günleri birlikte hafifletmek ve daha çok anı biriktirmek için.</p>
     <div class="testArea" id="finalArea">
       <button class="primary" id="yesBtn">Ben de istiyorum</button>
       <button class="secondary" id="thinkBtn">Biraz düşüneyim</button>
       <button class="secondary" id="noBtn">Hayır</button>
     </div>
-    <div class="result" id="finalResult">Cevabın ne olursa olsun, yüzünde küçük bir gülümseme olsun istedim.</div>
+    <div class="result" id="finalResult"><div class="final-note">Cevabın ne olursa olsun, yüzünde küçük bir gülümseme olsun istedim.</div></div>
   </div>
 </div>
 </section>
@@ -245,7 +306,7 @@ const messages=[
 "Gülüşünü yeniden görmek için buradayım.",
 "Yalnız değilsin Ezgi. Gerçekten değil.",
 "Kendine bugün biraz daha nazik davran.",
-"İyi ki varsın."
+"İyi ki varsın.","Bazen sadece yanında sessizce durmak da sevgidir.","Bugünün ağırlığını tek başına taşımak zorunda değilsin.","Bir kötü gün, güzel bir hayatın tamamını anlatmaz.","Seni güldürmek için kötü şaka yapma hakkımı saklı tutuyorum."
 ];
 
 function hearts(x=innerWidth/2,y=innerHeight/2,count=18){
